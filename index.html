@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>todos</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
@@ -17,27 +18,27 @@
     </div>
 
     <div class="todos-list">
-        <div class="todo-item__unselected">
+        <div class="todo-item">
             <input class="todo-item_text" value="HTML">
             <input type="checkbox" class="todo-item_unselected-mark" aria-label="select the task">
             <button class="todo-item_remove" aria-label="remove the task"></button>
 
         </div>
 
-        <div class="todo-item__selected">
+        <div class="todo-item __selected">
             <input class="todo-item_text" value="CSS">
             <input type="checkbox" checked="checked" class="todo-item_selected-mark" aria-label="unselect the task">
             <button class="todo-item_remove" aria-label="remove the task"></button>
 
         </div>
 
-        <div class="todo-item__unselected">
+        <div class="todo-item">
             <input class="todo-item_text" value="JS">
             <input type="checkbox" class="todo-item_unselected-mark" aria-label="select the task">
             <button class="todo-item_remove" aria-label="remove the task"></button>
         </div>
 
-        <div class="todo-item__unselected">
+        <div class="todo-item">
             <input class="todo-item_text" value="JS tools">
             <input type="checkbox" class="todo-item_unselected-mark" aria-label="select the task">
             <button class="todo-item_remove" aria-label="remove the task"></button>
@@ -48,9 +49,9 @@
         <div class="todos-actions-bar_remaining-tasks" aria-label="count of remaining tasks">n items left</div>
 
         <div class="todos-actions-bar_filters">
-            <button class="todos-filter__active" data-filter="all" aria-label="filter: display all tasks">All</button>
+            <button class="todos-filter __active" data-filter="all" aria-label="filter: display all tasks">All</button>
             <button class="todos-filter" data-filter="selected" aria-label="filter: display active tasks" role="button">Active</button>
-            <button class="todos-filter__active" data-filter="unselected" aria-label="filter: display completed tasks" role="button">Completed</button>
+            <button class="todos-filter" data-filter="unselected" aria-label="filter: display completed tasks" role="button">Completed</button>
         </div>
         <button class="todos-actions-bar_clear-completed" aria-label="remove all completed tasks">Clear completed</button>
     </div>
