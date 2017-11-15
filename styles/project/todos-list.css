@@ -81,6 +81,11 @@
             vertical-align: baseline;*/
         }
 
+        .todo-item.__selected  .todo-item_text {
+            color: #cccccc;
+            text-decoration: line-through;
+        }
+
 
         .todo-item_remove {
             height: 64px;
