@@ -1,15 +1,15 @@
+@import "../config/globals";
+
+
 .todos-add {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $crl-gray-very-light;
+    @include clearfix();
 }
-    .todos-add:after{
-            content: '';
-            display: block;
-            clear: both;
-    }
+
 
     .todo-add_select-all {
-        width: 64px;
-        height: 64px;
+        width: $width_select-all;
+        height: $height_todo-item;
         background: none;
         border: none;
         padding: 0;
@@ -22,13 +22,13 @@
     }
 
     .todo-add_select-all:hover {
-        cursor: pointer;        /*???*/
+        cursor: pointer;
     }
 
         .todo-add_select-all_icon {
-            width: 24px;
-            height: 12px;
-            background: url('../../img/icons/select-all.png') no-repeat;
+            width: $offset_6x;
+            height: $offset_3x;
+            background: url($img_select-all) no-repeat;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -47,16 +47,16 @@
             border: 0;
             box-sizing: border-box;
             background: none;
-            font-size: 24px;
+            font-size: $fs_xx-large;
             line-height: 30px;
-            color: #666666;
+            color: $clr-gray-dark;
             font-weight: 200;
-            padding-right: 12px;
-            margin-top: 16px;
+            padding-right: $offset_3x;
+            margin-top: $offset_4x;
             outline: none;
         }
 
             .todo-add_input::placeholder {
-                color: #ccc;
+                color: $crl-gray-light;
                 font-style: italic;
             }

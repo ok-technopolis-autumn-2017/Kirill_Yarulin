@@ -1,0 +1,30 @@
+@import "../config/globals";
+
+$box-shadow: 0 ($offset_half) ($offset) rgba(0, 0, 0, .2);
+
+.todos-main {
+    background: $clr-white-light;
+    box-shadow: $box-shadow;
+    position: relative;
+}
+
+    .todos-main:before,
+    .todos-main:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        background: $clr-white-light;
+        box-shadow: $box-shadow;
+        z-index: -1;
+    }
+
+        .todos-main:before {
+            height: $offset_2x;
+            left: $offset;
+            right: $offset;
+        }
+        .todos-main:after {
+            height: $offset;
+            left: $offset_half;
+            right: $offset_half;
+        }

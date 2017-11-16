@@ -1,0 +1,66 @@
+@import "../config/globals";
+
+$clr-border-filter: #ebdfdf;
+$height_action-bar: 40px;
+
+
+.todos-actions-bar {
+    position: relative;
+    height: $height_action-bar;
+    border-top: 1px solid $crl-gray-very-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+        .todos-actions-bar_remaining-tasks {
+            line-height: $offset_4x;
+
+            width: 96px;
+            text-align: center;
+            background: none;
+            color: $clr-gray;
+            float: left;
+            @include clearfix;
+        }
+
+
+
+    .todos-actions-bar_filters {
+        float: left;
+    }
+
+        .todos-filter {
+            margin: 6px;
+            padding: $offset $offset_2x;
+            background: none;
+            color: $clr-gray;
+            outline: none;
+            border: 0;
+            border-radius: 5px;
+
+        }
+
+        .__active {
+            border: 1px solid $clr-border-filter;
+        }
+
+        .todos-filter:hover {
+            cursor: pointer;
+        }
+
+    .todos-actions-bar_clear-completed {
+        line-height: $offset_4x;
+        width: 120px;
+        background: none;
+        color: $clr-gray;
+        border: 0;
+        outline: none;
+        float: right;
+    }
+
+
+        .todos-actions-bar_clear-completed:hover {
+            cursor: pointer;
+        }

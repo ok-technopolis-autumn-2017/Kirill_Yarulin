@@ -1,3 +1,8 @@
+@import "../config/globals";
+
+$clr-border-checkbox: #e7e7e7;
+$clr-border-checkbox-active: #76ccbc;
+
 .todos-list {
     margin-bottom: 50px;
 }
@@ -6,8 +11,8 @@
         overflow: hidden;
         position: relative;
         width: 100%;
-        min-height: 64px;
-        border-bottom: 1px solid #e6e6e6;
+        min-height: $height_todo-item;
+        border-bottom: 1px solid $crl-gray-very-light;
 
         display: flex;
         justify-content: space-between;
@@ -15,14 +20,14 @@
 
 
     .todo-item:hover {
-        background: #fafafa;
+        background: $clr-white-dark;
     }
 
         .input-checkbox {
             position: relative;
-            width: 64px;
-            height: 64px;
-            min-width: 64px;
+            width: $width_input-checkbox;
+            height: $height_todo-item;
+            min-width: $width_input-checkbox;
 
             align-self: center;
             float: left;
@@ -48,7 +53,7 @@
                 left: 10%;
                 border-radius: 50%;
                 background: none;
-                border: 1px solid #e7e7e7;
+                border: 1px solid $clr-border-checkbox;
             }
 
             .input-checkbox_target:hover {
@@ -57,8 +62,8 @@
 
 
             .input-checkbox_target:checked ~ .input-checkbox_visual {
-                border: 1px solid #76ccbc;
-                background: url('../../img/icons/completed.png') no-repeat center center;
+                border: 1px solid $clr-border-checkbox-active;
+                background: url($img_input-checkbox) no-repeat center center;
 
                 position: absolute;
                 height: 80%;
@@ -69,26 +74,24 @@
 
         .todo-item_text {
             width: 100%;
-            /*border: 0;*/
             background: none;
-            font-size: 24px;
-            color: #666666;
+            font-size: $fs_xx-large;
+            color: $clr-gray-dark;
             outline: none;
             font-weight: 200;
-            padding-top: 20px;
+            padding-top: $offset_5x;
             word-break: break-all;
-            /*line-height: 17px;
-            vertical-align: baseline;*/
         }
 
         .todo-item.__selected  .todo-item_text {
-            color: #cccccc;
+            font-size: $fs_xx-large;
+            color: $crl-gray-light;
             text-decoration: line-through;
         }
 
 
         .todo-item_remove {
-            height: 64px;
+            height: $height_todo-item;
             width: 42px;
             align-self: flex-end;
             float: right;
@@ -99,7 +102,7 @@
         }
 
             .todo-item:hover  .todo-item_remove {
-                background: url('../../img/icons/close.png') no-repeat center center;
+                background: url($img_delete) no-repeat center center;
             }
 
             .todo-item_remove:hover {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>todos</title>
-    <link rel="stylesheet" href="./styles/default.css"/>
+    <link rel="stylesheet" href="./dist/styles/default.css"/>
 </head>
 <body>
 <div class="todos-main-wrapper">
@@ -73,9 +73,8 @@
 
 
         <div class="todos-actions-bar">
-            <div class="todos-actions-bar_remaining-tasks-w">
-                <div class="todos-actions-bar_remaining-tasks" aria-label="count of remaining tasks">n items left</div>
-            </div>
+
+            <div class="todos-actions-bar_remaining-tasks" aria-label="count of remaining tasks">n items left</div>
 
             <div class="todos-actions-bar_filters">
                 <button class="todos-filter __active" data-filter="all" aria-label="filter: display all tasks">All
@@ -87,9 +86,7 @@
                         role="button">Completed
                 </button>
             </div>
-            <div class="todos-actions-bar_clear-completed-w">
                 <button class="todos-actions-bar_clear-completed" aria-label="remove all completed tasks">Clear completed</button>
-            </div>
         </div>
     </div>
 </div>
