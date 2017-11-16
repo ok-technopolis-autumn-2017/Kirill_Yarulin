@@ -1,0 +1,62 @@
+@import "../config/globals";
+
+
+.todos-add {
+    border-bottom: 1px solid $crl-gray-very-light;
+    @include clearfix();
+}
+
+
+    .todo-add_select-all {
+        width: $width_select-all;
+        height: $height_todo-item;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        position: relative;
+        float: left;
+
+        outline: none;
+    }
+
+    .todo-add_select-all:hover {
+        cursor: pointer;
+    }
+
+        .todo-add_select-all_icon {
+            width: $offset_6x;
+            height: $offset_3x;
+            background: url($img_select-all) no-repeat;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -6px -12px;
+
+        }
+
+
+    .todo-add_input-wrapper {
+        overflow: hidden;
+    }
+
+        .todo-add_input {
+            width: 100%;
+
+            border: 0;
+            box-sizing: border-box;
+            background: none;
+            font-size: $fs_xx-large;
+            line-height: 30px;
+            color: $clr-gray-dark;
+            font-weight: 200;
+            padding-right: $offset_3x;
+            margin-top: $offset_4x;
+            outline: none;
+        }
+
+            .todo-add_input::placeholder {
+                color: $crl-gray-light;
+                font-style: italic;
+            }

@@ -1,0 +1,110 @@
+@import "../config/globals";
+
+$clr-border-checkbox: #e7e7e7;
+$clr-border-checkbox-active: #76ccbc;
+
+.todos-list {
+    margin-bottom: 50px;
+}
+
+    .todo-item {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        min-height: $height_todo-item;
+        border-bottom: 1px solid $crl-gray-very-light;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .todo-item:hover {
+        background: $clr-white-dark;
+    }
+
+        .input-checkbox {
+            position: relative;
+            width: $width_input-checkbox;
+            height: $height_todo-item;
+            min-width: $width_input-checkbox;
+
+            align-self: center;
+            float: left;
+        }
+
+
+            .input-checkbox_target {
+                position: absolute;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .input-checkbox_visual {
+                position: absolute;
+                top: 10%;
+                right: 10%;
+                bottom: 10%;
+                left: 10%;
+                border-radius: 50%;
+                background: none;
+                border: 1px solid $clr-border-checkbox;
+            }
+
+            .input-checkbox_target:hover {
+                cursor: pointer;
+            }
+
+
+            .input-checkbox_target:checked ~ .input-checkbox_visual {
+                border: 1px solid $clr-border-checkbox-active;
+                background: url($img_input-checkbox) no-repeat center center;
+
+                position: absolute;
+                height: 80%;
+                width: 80%;
+            }
+
+
+
+        .todo-item_text {
+            width: 100%;
+            background: none;
+            font-size: $fs_xx-large;
+            color: $clr-gray-dark;
+            outline: none;
+            font-weight: 200;
+            padding-top: $offset_5x;
+            word-break: break-all;
+        }
+
+        .todo-item.__selected  .todo-item_text {
+            font-size: $fs_xx-large;
+            color: $crl-gray-light;
+            text-decoration: line-through;
+        }
+
+
+        .todo-item_remove {
+            height: $height_todo-item;
+            width: 42px;
+            align-self: flex-end;
+            float: right;
+            background: none;
+            border: 0;
+            outline: none;
+
+        }
+
+            .todo-item:hover  .todo-item_remove {
+                background: url($img_delete) no-repeat center center;
+            }
+
+            .todo-item_remove:hover {
+                cursor: pointer;
+            }

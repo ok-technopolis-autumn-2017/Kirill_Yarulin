@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todos</title>
+    <link rel="stylesheet" href="./dist/styles/default.css"/>
+</head>
+<body>
+<div class="todos-main-wrapper">
+    <div class="todos-header">
+        <h1 class="todos-title">todos</h1>
+    </div>
+
+    <div class="todos-main">
+        <div class="todos-add">
+            <button class="todo-add_select-all" aria-label="select all tasks">
+                <div class="todo-add_select-all_icon"></div>
+            </button>
+            <div class="todo-add_input-wrapper">
+                <input class="todo-add_input" placeholder="What needs to be done?">
+            </div>
+        </div>
+
+        <div class="todos-list">
+            <div class="todo-item">
+                <div class="input-checkbox">
+                    <input type="checkbox" class="input-checkbox_target" aria-label="select the task">
+                    <div class="input-checkbox_visual"></div>
+                </div>
+
+
+                <div class="todo-item_text" contenteditable="true">HTML</div>
+
+
+                <button class="todo-item_remove" aria-label="remove the task"></button>
+            </div>
+
+            <div class="todo-item __selected">
+                <div class="input-checkbox">
+                    <input type="checkbox" checked="checked" class="input-checkbox_target"
+                           aria-label="unselect the task">
+                    <div class="input-checkbox_visual"></div>
+                </div>
+                <div class="todo-item_text" contenteditable="true">CSS</div>
+
+                <button class="todo-item_remove" aria-label="remove the task"></button>
+            </div>
+
+            <div class="todo-item">
+                <div class="input-checkbox">
+                    <input type="checkbox" class="input-checkbox_target" aria-label="select the task">
+                    <div class="input-checkbox_visual"></div>
+                </div>
+
+                <div class="todo-item_text" contenteditable="true">JS</div>
+
+                <button class="todo-item_remove" aria-label="remove the task"></button>
+            </div>
+
+            <div class="todo-item">
+                <div class="input-checkbox">
+                    <input type="checkbox" class="input-checkbox_target" aria-label="select the task">
+                    <div class="input-checkbox_visual"></div>
+                </div>
+
+                <div class="todo-item_text" contenteditable="true">JS tools</div>
+
+                <button class="todo-item_remove" aria-label="remove the task"></button>
+            </div>
+        </div>
+
+
+
+
+        <div class="todos-actions-bar">
+
+            <div class="todos-actions-bar_remaining-tasks" aria-label="count of remaining tasks">n items left</div>
+
+            <div class="todos-actions-bar_filters">
+                <button class="todos-filter __active" data-filter="all" aria-label="filter: display all tasks">All
+                </button>
+                <button class="todos-filter" data-filter="selected" aria-label="filter: display active tasks"
+                        role="button">Active
+                </button>
+                <button class="todos-filter" data-filter="unselected" aria-label="filter: display completed tasks"
+                        role="button">Completed
+                </button>
+            </div>
+                <button class="todos-actions-bar_clear-completed" aria-label="remove all completed tasks">Clear completed</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
